@@ -5,75 +5,84 @@
         Width="800" Height="700"
         Background="Black">
 
-    <StackPanel Margin="20" Spacing="20">
-
+    <Grid RowDefinitions="Auto,*,Auto" Margin="20">
         <!-- Title -->
-        <TextBlock Text="Drug Counter"
+        <TextBlock Grid.Row="0"
+                   Text="Drug Counter"
                    FontSize="28"
                    FontWeight="Bold"
                    Foreground="White"
                    HorizontalAlignment="Center"
                    Margin="0,10"/>
 
-        <!-- Acetaminophen -->
-        <StackPanel Orientation="Horizontal" Spacing="15" Margin="0,10">
-            <TextBlock Text="Acetaminophen:"
-                       Width="150"
-                       FontSize="16"
-                       Foreground="White"
-                       VerticalAlignment="Center"/>
-            <TextBlock x:Name="AcetaminophenCountText"
-                       Text="0"
-                       Width="50"
-                       FontSize="16"
-                       Foreground="White"
-                       VerticalAlignment="Center"/>
-            <Button Content="Add"
-                    Width="80"
-                    Padding="5,2"
-                    Click="OnAcetaminophenClicked"/>
+        <!-- Drug Counters Section -->
+        <StackPanel Grid.Row="1" Spacing="20">
+
+            <!-- Acetaminophen -->
+            <StackPanel Orientation="Horizontal" Spacing="15">
+                <TextBlock Text="Acetaminophen:"
+                           Width="150"
+                           FontSize="16"
+                           Foreground="White"
+                           VerticalAlignment="Center"/>
+                <TextBlock x:Name="AcetaminophenCountText"
+                           Text="0"
+                           Width="50"
+                           FontSize="16"
+                           Foreground="White"
+                           VerticalAlignment="Center"/>
+                <Button Content="Add"
+                        Width="80"
+                        Padding="5,2"
+                        HorizontalAlignment="Left"
+                        Click="OnAcetaminophenClicked"/>
+            </StackPanel>
+
+            <!-- Oxycotin -->
+            <StackPanel Orientation="Horizontal" Spacing="15">
+                <TextBlock Text="Oxycotin:"
+                           Width="150"
+                           FontSize="16"
+                           Foreground="White"
+                           VerticalAlignment="Center"/>
+                <TextBlock x:Name="OxycotinCountText"
+                           Text="0"
+                           Width="50"
+                           FontSize="16"
+                           Foreground="White"
+                           VerticalAlignment="Center"/>
+                <Button Content="Add"
+                        Width="80"
+                        Padding="5,2"
+                        HorizontalAlignment="Left"
+                        Click="OnOxycotinClicked"/>
+            </StackPanel>
+
+            <!-- Ibuprofen -->
+            <StackPanel Orientation="Horizontal" Spacing="15">
+                <TextBlock Text="Ibuprofen:"
+                           Width="150"
+                           FontSize="16"
+                           Foreground="White"
+                           VerticalAlignment="Center"/>
+                <TextBlock x:Name="IbuprofenCountText"
+                           Text="0"
+                           Width="50"
+                           FontSize="16"
+                           Foreground="White"
+                           VerticalAlignment="Center"/>
+                <Button Content="Add"
+                        Width="80"
+                        Padding="5,2"
+                        HorizontalAlignment="Left"
+                        Click="OnIbuprofenClicked"/>
+            </StackPanel>
+
         </StackPanel>
 
-        <!-- Oxycotin -->
-        <StackPanel Orientation="Horizontal" Spacing="15" Margin="0,10">
-            <TextBlock Text="Oxycotin:"
-                       Width="150"
-                       FontSize="16"
-                       Foreground="White"
-                       VerticalAlignment="Center"/>
-            <TextBlock x:Name="OxycotinCountText"
-                       Text="0"
-                       Width="50"
-                       FontSize="16"
-                       Foreground="White"
-                       VerticalAlignment="Center"/>
-            <Button Content="Add"
-                    Width="80"
-                    Padding="5,2"
-                    Click="OnOxycotinClicked"/>
-        </StackPanel>
-
-        <!-- Ibuprofen -->
-        <StackPanel Orientation="Horizontal" Spacing="15" Margin="0,10">
-            <TextBlock Text="Ibuprofen:"
-                       Width="150"
-                       FontSize="16"
-                       Foreground="White"
-                       VerticalAlignment="Center"/>
-            <TextBlock x:Name="IbuprofenCountText"
-                       Text="0"
-                       Width="50"
-                       FontSize="16"
-                       Foreground="White"
-                       VerticalAlignment="Center"/>
-            <Button Content="Add"
-                    Width="80"
-                    Padding="5,2"
-                    Click="OnIbuprofenClicked"/>
-        </StackPanel>
-
-        <!-- Action Buttons -->
-        <StackPanel Orientation="Horizontal"
+        <!-- Bottom Buttons -->
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
                     HorizontalAlignment="Center"
                     Spacing="20"
                     Margin="0,30,0,0">
@@ -91,5 +100,5 @@
                     Click="OnExitClicked"/>
         </StackPanel>
 
-    </StackPanel>
+    </Grid>
 </Window>
