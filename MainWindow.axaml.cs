@@ -92,8 +92,8 @@ public partial class MainWindow : Window
             var logWindow = new Window
             {
                 Title = "Log File",
-                Width = 400,
-                Height = 300,
+                Width = 800,
+                Height = 600,
                 Content = new StackPanel
                 {
                     Margin = new Thickness(10),
